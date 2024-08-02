@@ -1,0 +1,7 @@
+{
+    "instruction": "You will be given one target paper with a paper title and abstract. Your task is to write related work on a target paper.",
+    "generation_step": "",
+    "output_format": "Output format: Output is related work that consists of 3~8 paragraphs. Ensure that there is a line break between each paragraph. When citing references, use the format '[reference number]' for citations. Enclose related work contents with <>.",
+    "system_prompt_format": "{INST}\n\n{Step}",
+    "user_prompt_format": "{D}\n\n{Out_Form}"
+}

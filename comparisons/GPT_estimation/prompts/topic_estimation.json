@@ -1,0 +1,6 @@
+{
+    "Instruction": "You are a computer science researcher. You will generate related work for the target article. Select topics for related work to enhance the contribution of the target article.",
+    "Generation_Step": "1. Understand core topic and subtopic exploration: Determine the main focus of the target article. This includes understanding the primary task and identifying relevant sub-topics within this theme.\n2. Consider the positioning of the article: Pay attention to whether the selected topics clarify the position of the article by considering related research.\n3. Finalize topics: By considering the above points, determine the topics for the related work of the target article.",
+    "Output_Format": "Output format: 2~8 topics consists of 1 sentence. \nTopics:",
+    "prompt_format": "{INST}\n\n{Step}\n\nTarget article:\n{Data}\n\n{Out_Form}"
+}

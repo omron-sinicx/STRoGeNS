@@ -1,0 +1,7 @@
+{
+    "Instruction": "You will be given one paragraph in a related work section of scientific paper.\n\nYour task is to write a topic sentence for a given paragraph.\n\nA topic sentence is a sentence that captures the main idea of a paragraph or section of text. The topic sentence is one sentences that introduce a paragraph. The topic sentence should be long ~300 characters.",
+    "Generation_Step": "",
+    "Output_Format": "Output format: Output is related work that consists of 3~8 paragraphs. Ensure that there is a line break between each paragraph. When citing references, use the format '[reference number]' for citations. Enclose related work contents with <>.",
+    "prompt_format": "{INST}{Example}\n\nParagraph:\n\n{{{Data}}}\n\nTopic sentence:",
+    "Examples": ""
+}

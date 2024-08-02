@@ -1,0 +1,91 @@
+FROM pytorch/pytorch:2.1.0-cuda12.1-cudnn8-devel
+LABEL maintainer="nishimura"
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV TZ America/New_York
+
+RUN apt update && apt install -y --no-install-recommends sudo \
+    libsm6 libxext6 libgtk2.0-dev libjpeg-dev libpng-dev libgl1-mesa-glx librdmacm1 libibverbs1 libsndfile1-dev \
+    librdmacm1 libibverbs1 libopenmpi-dev\
+    g++ less\
+    ibverbs-providers git gcc tesseract-ocr espeak-ng ca-certificates bzip2 \
+    cmake tree htop bmon iotop build-essential openjdk-8-jdk-headless \ 
+    ffmpeg curl wget 
+
+RUN apt-get update && \
+   DEBIAN_FRONTEND=noninteractive \
+   apt-get -y install default-jre-headless && \
+   apt-get clean && \
+   rm -rf /var/lib/apt/lists/*
+
+RUN apt install -y libsndfile1-dev
+RUN apt update && apt-get install -y libxml-parser-perl
+# RUN git lfs install
+
+RUN /opt/conda/bin/python -mpip install --no-cache-dir\
+    lexrank \ 
+    summa \
+    librosa \
+    "soundfile>=0.12.1" \
+    scipy \
+    git+https://github.com/huggingface/transformers \
+    git+https://github.com/huggingface/accelerate \
+    peft[test]@git+https://github.com/huggingface/peft \
+    git+https://github.com/pltrdy/pyrouge \
+    evaluate \
+    deepspeed \
+    tqdm \
+    openpyxl \
+    bitsandbytes \
+    loralib \
+    wandb \ 
+    deepspeed-mii \
+    loguru \
+    jupyter \
+    beautifulsoup4 \
+    selenium\
+    slugify \
+    jsonlines \
+    datasets \
+    dill \
+    flask \
+    lxml \
+    matplotlib \
+    nltk \
+    numpy \
+    pandas \
+    requests \
+    lit \
+    optimum \
+    vllm \
+    trl \
+    einops \
+    nougat-ocr \
+    triton \
+    deepspeed-mii \
+    datasets && \
+    /opt/conda/bin/conda clean -ya
+
+
+
+
+
+# RUN git clone https://github.com/pltrdy/files2rouge.git /src  
+# WORKDIR /src
+# RUN python setup_rouge.py
+# RUN python setup.py install
+
+# RUN python -c "\
+# import nltk;\
+# nltk.download('punkt');"
+
+ARG UID
+ARG USER
+ARG PASSWORD
+RUN groupadd -g 1000 ${USER}_group
+RUN useradd -m --uid=${UID} --gid=${USER}_group --groups=sudo ${USER}
+RUN echo ${USER}:${PASSWORD} | chpasswd
+RUN echo 'root:root' | chpasswd
+USER ${USER}
