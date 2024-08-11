@@ -4,7 +4,7 @@
 
 [Kazuya Nishimura](https://naivete5656.github.io/), [Kuniaki Saito](https://ksaito-ut.github.io/), [Tosho Hirasawa](https://cl.sd.tmu.ac.jp/~tosho/), [Yoshitaka Ushiku](https://yoshitakaushiku.net/index.html)
 
-[Paper][[Poster]](data/figures/Relatedwork_generation.png)
+[Paper](https://aclanthology.org/2024.sdp-1.5.pdf)[[Poster]](data/figures/Relatedwork_generation.png)
 
 ## To do 
 
