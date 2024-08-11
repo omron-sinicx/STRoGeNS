@@ -4,7 +4,7 @@
 
 [Kazuya Nishimura](https://naivete5656.github.io/), [Kuniaki Saito](https://ksaito-ut.github.io/), [Tosho Hirasawa](https://cl.sd.tmu.ac.jp/~tosho/), [Yoshitaka Ushiku](https://yoshitakaushiku.net/index.html)
 
-[Paper](https://aclanthology.org/2024.sdp-1.5.pdf)[[Poster]](data/figures/Relatedwork_generation.png)
+[[Paper]](https://aclanthology.org/2024.sdp-1.5.pdf)[[Poster]](data/figures/Relatedwork_generation.png)
 
 ## To do 
 
@@ -32,9 +32,9 @@
 |TAD|218,255|1071.4|162.3|5.2|1|
 |BigSurvey-MDS|4,478|11,893.1|1,051.7|76.3|1|
 |SciReviewGen|10,130|11,734.4|7,193.8|68.1|1|
-|**STRoGeNS-arXiv22**|85,853|3,046.2|514.3|16.6|4.22|
-|**STRoGeNS-conf22**|15,079|3,669.1|508.5|20.4|4.27|
-|**STRoGeNS-conf23**|4,762|4,836.6|504.6|25.7|4.04|
+|**STRoGeNS-arXiv22 (Ours)**|85,853|3,046.2|514.3|16.6|4.22|
+|**STRoGeNS-conf22 (Ours)**|15,079|3,669.1|508.5|20.4|4.27|
+|**STRoGeNS-conf23 (Ours)**|4,762|4,836.6|504.6|25.7|4.04|
 
 
 <img src="data/figures/task_description.png" width="50%">
@@ -63,10 +63,9 @@
 
 ### Example of data 
 ```
-data/example.md
+Comming soon
 ```
 </details>
-
 
 
 <!-- *********************************** -->
@@ -118,10 +117,7 @@ Unfortunately, due to licensing issues, we are unable to release all of the data
 We release a part of STRoGeNS-arXiv22 consisting of articles with an open license. 
 To generate the entire dataset, we release the processing code that handles the process of creating the datasets.
 
-
-
 <img src="data/figures/datasetgeneration.png" width="400">
-
 
 <details>
 <summary style="font-size: 20px;"> STRoGENS-arXiv22 </summary>
@@ -243,9 +239,7 @@ python ./preprocessing/conf_dataset/conf_add_ref_info.py --input_dir {title_extr
 
 ## Run comparisons
 
-Model Weights
-
-## Scripts 
+### Scripts
 ``` /bin/bash
 bash ./scripts/comparisons/{method_name}.sh
 ```
