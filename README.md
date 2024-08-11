@@ -277,7 +277,7 @@ python ./metrics/novelty_eval/accuracy_eval.py
 </details>
 
 ## License
-The codes are licensed under the [###](./LICENSE). 
+The codes are licensed under the [MIT LICENSE](./LICENSE). 
 
 ## Acknowledgements
 
